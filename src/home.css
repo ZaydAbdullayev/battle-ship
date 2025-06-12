@@ -1,0 +1,143 @@
+/* === Cozy Brain Decay CSS === */
+.home-container {
+  height: 100dvh;
+  /* overflow-y: auto; */
+  background-image: url("./assets/bg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 1rem;
+  gap: 3rem;
+  position: relative;
+}
+
+.title {
+  align-items: center;
+  width: 100%;
+  padding: 1rem 5rem 34dvh;
+  text-align: center;
+
+  h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    font-weight: 600;
+    background-image: linear-gradient(to bottom, #fffdf2, #ffebbc, #d6aa57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.button {
+  padding: 0.6rem 4rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background-image: url("./assets/button-bg.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  filter: brightness(0.9) contrast(1.08);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1) contrast(1.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  }
+
+  &:active {
+    filter: brightness(0.8) contrast(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+  }
+
+  &.soon{
+    filter: grayscale(1);
+  }
+}
+
+.rooms {
+  width: 60vw;
+  margin-top: -20px;
+  background-image: url("./assets/maps-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow-y: auto;
+  color: #251f11;
+
+  > h1 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 2rem 0 0;
+    background-image: url("./assets/maps-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      height: 2px;
+      background-color: #000000;
+      filter: blur(2px);
+    }
+  }
+}
+
+.rooms::-webkit-scrollbar {
+  display: none;
+}
+
+.room-card {
+  position: relative;
+  padding: 0.5rem 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 1px;
+    background: #251f115e;
+  }
+
+  .button {
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  figure {
+    align-items: flex-end;
+  }
+
+  img {
+    width: 220px;
+    object-fit: cover;
+  }
+}
+
+.footer {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #251f115e;
+  background-image: linear-gradient(to bottom, #fffdf2, #312612, #312612);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
